@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yunus Taymur | Siber Güvenlik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="matrix-bg"></div>
+  <div class="container">
+    <div class="rotating">
+      <h1>YUNUS TAYMUR</h1>
+      <h2>SİBER GÜVENLİK & YAPAY ZEKA ÇÖZÜMLERİ</h2>
+    </div>
+    <p class="coming-soon">İÇERİK YAKINDA EKLENECEK...</p>
+<section class="cards-section">
+  <div class="card" onclick="alert('İçerik yakında eklenecek.')">
+    <h3>OSINT</h3>
+    <p>Açık Kaynak İstihbarat Araçları</p>
+  </div>
+  <div class="card" onclick="alert('İçerik yakında eklenecek.')">
+    <h3>YAPAY ZEKA</h3>
+    <p>Model, simülasyon, veri analiz</p>
+  </div>
+  <div class="card" onclick="alert('İçerik yakında eklenecek.')">
+    <h3>SİBER GÜVENLİK</h3>
+    <p>Simülasyon, parola, güvenlik testleri</p>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.transform = `rotateY(${(x - rect.width / 2) / 10}deg) rotateX(${(rect.height / 2 - y) / 10}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    });
+  });
+</script>
+  </div>
+</body>
+</html>
