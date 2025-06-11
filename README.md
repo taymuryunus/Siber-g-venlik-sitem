@@ -1,1 +1,1 @@
-# Siber-g-venlik-sitem
+# Siber-guvenlik-sitem
